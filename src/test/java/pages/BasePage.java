@@ -30,22 +30,16 @@ public class BasePage {
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
+    protected void waitUntilElementIsVisible(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     protected void waitElementToBeClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     protected WebDriver getDriver() {
         return this.driver;
-    }
-
-    public void focusElement(WebElement element) {
-//        String javaScript = "var evObj = document.createEvent('MouseEvents');"
-//                + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);"
-//                + "arguments[0].dispatchEvent(evObj);";
-//        ((JavascriptExecutor) getDriver()).executeScript(javaScript, element);
-
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("document.getElementById('send2').focus();");
     }
 
     public void clickAccountButtonHeader() {

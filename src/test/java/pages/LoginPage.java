@@ -20,7 +20,7 @@ public class LoginPage extends BasePage {
         for (int i = 1; i <= username.length(); i++) {
             getDriver().findElement(userNameInput).sendKeys(username.substring(i-1,i));
             try {
-                Thread.sleep(275);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -31,7 +31,7 @@ public class LoginPage extends BasePage {
         for (int i = 1; i <= userPass.length(); i++) {
             getDriver().findElement(userPasswordInput).sendKeys(userPass.substring(i-1,i));
             try {
-                Thread.sleep(95);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -40,19 +40,6 @@ public class LoginPage extends BasePage {
 
     public void clickLoginButton(){
         waitElementToBeClickable(getDriver().findElement(loginButton));
-
-        focusElement(getDriver().findElement(loginButton));
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        getDriver().findElement(userNameInput).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         getDriver().findElement(loginButton).click();
     }
 
