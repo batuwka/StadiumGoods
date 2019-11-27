@@ -13,7 +13,7 @@ public class OverviewPage extends BasePage {
         super(driver);
     }
 
-    public void pageLoaded(){
+    public void pageLoaded() {
         waitElementToBeClickable(getDriver().findElement(logOutButton));
     }
 }

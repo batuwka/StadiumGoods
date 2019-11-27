@@ -16,9 +16,9 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         for (int i = 1; i <= username.length(); i++) {
-            getDriver().findElement(userNameInput).sendKeys(username.substring(i-1,i));
+            getDriver().findElement(userNameInput).sendKeys(username.substring(i - 1, i));
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
@@ -27,9 +27,9 @@ public class LoginPage extends BasePage {
         }
     }
 
-    public void setUserPassword(String userPass){
+    public void setUserPassword(String userPass) {
         for (int i = 1; i <= userPass.length(); i++) {
-            getDriver().findElement(userPasswordInput).sendKeys(userPass.substring(i-1,i));
+            getDriver().findElement(userPasswordInput).sendKeys(userPass.substring(i - 1, i));
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
@@ -38,7 +38,7 @@ public class LoginPage extends BasePage {
         }
     }
 
-    public void clickLoginButton(){
+    public void clickLoginButton() {
         waitElementToBeClickable(getDriver().findElement(loginButton));
         getDriver().findElement(loginButton).click();
     }

@@ -5,14 +5,21 @@ import pages.popup.MainPagePopup;
 
 public class MainPage extends BasePage {
 
-    MainPagePopup mainPagePopup;
+    private Header header;
+    private MainPagePopup mainPagePopup;
 
     public MainPage(WebDriver driver) {
         super(driver);
         this.mainPagePopup = new MainPagePopup(driver);
+        this.header = new Header(driver);
     }
 
-    public void closePopup(){
+    public void closePopup() {
         this.mainPagePopup.clickCloseButton();
+    }
+
+    public void clickHeaderMenuButton(int number) {
+        System.out.println("number:" + number);
+        header.clickMenuButton(number);
     }
 }

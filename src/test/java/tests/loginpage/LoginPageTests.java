@@ -1,9 +1,6 @@
 package tests.loginpage;
 
 import cloud.stadiumgoods.utils.XLSXDataReader;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,11 +10,11 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.OverviewPage;
 import pages.popup.ReCaptcha;
-import tests.BasicTest;
+import tests.BaseTest;
 
 import java.io.IOException;
 
-public class LoginPageTests  extends BasicTest{
+public class LoginPageTests extends BaseTest {
     private String baseURL;
     private MainPage mainPage;
     private LoginPage loginPage;
@@ -52,9 +49,9 @@ public class LoginPageTests  extends BasicTest{
         loginPage.setUsername(login);
         loginPage.setUserPassword(pass);
         loginPage.clickLoginButton();
-        if (reCaptcha.reCaptchaIsVisible()){
+        if (reCaptcha.reCaptchaIsVisible()) {
             Assert.assertEquals(driver.getTitle(), loginPage.title);
-        }else{
+        } else {
             Assert.assertEquals(driver.getTitle(), overviewPage.title);
         }
     }

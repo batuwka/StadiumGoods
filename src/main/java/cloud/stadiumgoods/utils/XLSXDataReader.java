@@ -15,17 +15,15 @@ public class XLSXDataReader {
 
     public String getUsername(int userCount) throws IOException {
         FileInputStream fis = new FileInputStream(myFile);
-        XSSFWorkbook myWorkBook = new XSSFWorkbook (fis);
+        XSSFWorkbook myWorkBook = new XSSFWorkbook(fis);
         XSSFSheet mySheet = myWorkBook.getSheetAt(0);
         Iterator<Row> rowIterator = mySheet.iterator();
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
             Iterator<Cell> cellIterator = row.cellIterator();
             while (cellIterator.hasNext()) {
-
                 Cell cell = cellIterator.next();
-
-                if (cell.getColumnIndex() == 0 && cell.getRowIndex() == userCount){
+                if (cell.getColumnIndex() == 0 && cell.getRowIndex() == userCount) {
                     myWorkBook.close();
                     fis.close();
                     return cell.toString();
@@ -40,17 +38,15 @@ public class XLSXDataReader {
 
     public String getPassword(int userCount) throws IOException {
         FileInputStream fis = new FileInputStream(myFile);
-        XSSFWorkbook myWorkBook = new XSSFWorkbook (fis);
+        XSSFWorkbook myWorkBook = new XSSFWorkbook(fis);
         XSSFSheet mySheet = myWorkBook.getSheetAt(0);
         Iterator<Row> rowIterator = mySheet.iterator();
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
             Iterator<Cell> cellIterator = row.cellIterator();
             while (cellIterator.hasNext()) {
-
                 Cell cell = cellIterator.next();
-
-                if (cell.getColumnIndex() == 1 && cell.getRowIndex() == userCount){
+                if (cell.getColumnIndex() == 1 && cell.getRowIndex() == userCount) {
                     myWorkBook.close();
                     fis.close();
                     return cell.toString();

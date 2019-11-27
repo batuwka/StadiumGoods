@@ -11,10 +11,9 @@ public class MainPagePopup extends BasePage {
         super(driver);
     }
 
-    public void clickCloseButton(){
+    public void clickCloseButton() {
         waitElementToBeClickable(getDriver().findElement(closeButton));
         getDriver().findElement(closeButton).click();
         waitUntilElementNotVisible(getDriver().findElement(closeButton));
     }
-
 }
