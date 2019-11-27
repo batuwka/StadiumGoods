@@ -22,7 +22,7 @@
 
     <profiles>
         <profile>
-            <id>main</id>
+            <id>StadiumGoods</id>
             <build>
                 <plugins>
                     <plugin>
@@ -30,8 +30,8 @@
                         <artifactId>maven-compiler-plugin</artifactId>
                         <version>3.8.1</version>
                         <configuration>
-                            <source>1.8</source>
-                            <target>1.8</target>
+                            <source>10</source>
+                            <target>10</target>
                         </configuration>
                     </plugin>
                     <plugin>
@@ -40,7 +40,33 @@
                         <version>2.22.2</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/java/suites/testng.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/java/suites/StadiumGoodsSuite.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>Pokeapi</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.8.1</version>
+                        <configuration>
+                            <source>10</source>
+                            <target>10</target>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.22.2</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/java/co/pokeapi/suites/PokemonSuite.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
@@ -69,6 +95,22 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>3.17</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.1.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.fge</groupId>
+            <artifactId>json-schema-core</artifactId>
+            <version>1.2.5</version>
         </dependency>
     </dependencies>
 

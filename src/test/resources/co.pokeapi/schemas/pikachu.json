@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "abilities": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "ability": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": ["lightning-rod"]
+                },
+                "url": {
+                  "type": "string",
+                  "enum": ["https://pokeapi.co/api/v2/ability/9/"]
+                }
+              },
+              "required": [
+                "name",
+                "url"
+              ]
+            },
+            "is_hidden": {
+              "type": "boolean",
+              "enum": [false]
+            },
+            "slot": {
+              "type": "integer",
+              "enum": [1]
+            }
+          },
+          "required": [
+            "ability",
+            "is_hidden",
+            "slot"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ability": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": ["static"]
+                },
+                "url": {
+                  "type": "string",
+                  "enum": ["https://pokeapi.co/api/v2/ability/31/"]
+                }
+              },
+              "required": [
+                "name",
+                "url"
+              ]
+            },
+            "is_hidden": {
+              "type": "boolean",
+              "enum": [true]
+            },
+            "slot": {
+              "type": "integer",
+              "enum": [3]
+            }
+          },
+          "required": [
+            "ability",
+            "is_hidden",
+            "slot"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "abilities"
+  ]
+}

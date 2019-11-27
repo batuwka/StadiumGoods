@@ -19,7 +19,7 @@ public class MainPage extends BasePage {
     }
 
     public void clickHeaderMenuButton(int number) {
-        System.out.println("number:" + number);
+        System.out.println("Opening header option number:" + number);
         header.clickMenuButton(number);
     }
 }

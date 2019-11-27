@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "abilities": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "ability": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": ["gluttony"]
+                },
+                "url": {
+                  "type": "string",
+                  "enum": ["https://pokeapi.co/api/v2/ability/82/"]
+                }
+              },
+              "required": [
+                "name",
+                "url"
+              ]
+            },
+            "is_hidden": {
+              "type": "boolean",
+              "enum": [true]
+            },
+            "slot": {
+              "type": "integer",
+              "enum": [1]
+            }
+          },
+          "required": [
+            "ability",
+            "is_hidden",
+            "slot"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ability": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": ["thick-fat"]
+                },
+                "url": {
+                  "type": "string",
+                  "enum": ["https://pokeapi.co/api/v2/ability/47/"]
+                }
+              },
+              "required": [
+                "name",
+                "url"
+              ]
+            },
+            "is_hidden": {
+              "type": "boolean",
+              "enum": [false]
+            },
+            "slot": {
+              "type": "integer",
+              "enum": [2]
+            }
+          },
+          "required": [
+            "ability",
+            "is_hidden",
+            "slot"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ability": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": ["immunity"]
+                },
+                "url": {
+                  "type": "string",
+                  "enum": ["https://pokeapi.co/api/v2/ability/17/"]
+                }
+              },
+              "required": [
+                "name",
+                "url"
+              ]
+            },
+            "is_hidden": {
+              "type": "boolean",
+              "enum": [false]
+            },
+            "slot": {
+              "type": "integer",
+              "enum": [3]
+            }
+          },
+          "required": [
+            "ability",
+            "is_hidden",
+            "slot"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "abilities"
+  ]
+}
