@@ -23,7 +23,7 @@ public class LoginPageTests extends BaseTest {
     private XLSXDataReader xlsxDataReader = new XLSXDataReader();
 
     @BeforeMethod
-    public void beforeLoginPageTestsMethod() throws InterruptedException, IOException {
+    public void beforeLoginPageTestsMethod() {
         this.beforeMethod();
         baseURL = "https://" + System.getProperty("basicAuth.login") + ":" + System.getProperty("basicAuth.pass") + "@stage.stadiumgoods.cloud";
 

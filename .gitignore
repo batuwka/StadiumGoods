@@ -1,5 +1,5 @@
 /.idea/
 /src/test/resources/driver/chromedriver.*
-/src/test/resources/data/*
+/src/test/resources/data/TestDataQAChallenge.xlsx
 StadiumGoods.iml
 target/

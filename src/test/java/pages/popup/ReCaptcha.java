@@ -6,7 +6,7 @@ import pages.BasePage;
 
 public class ReCaptcha extends BasePage {
 
-    private By reCaptchaIframe = By.xpath("//iframe[@title='проверка recaptcha']");
+    private By reCaptchaIframe = By.xpath("//iframe[contains(@title,'recaptcha')]");
 
     public ReCaptcha(WebDriver driver) {
         super(driver);
