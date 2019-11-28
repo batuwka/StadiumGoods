@@ -18,8 +18,8 @@ Hopefully, you will use chromedriver.exe file. If not it may cause an issue.
 
 ###RUN tests
 For running tests from console switch to current project root dir
-* for StadiumGoods tests run command in command line `mvn clean test -P StadiumGoods -DbasicAuth.login=<login> -DbasicAuth.pass=<pass>`
-* for Pokeiapi tests run command in command line `mvn clean test -P Pokeapi`
+* for StadiumGoods tests run command in command prompt `mvn clean test -P StadiumGoods -DbasicAuth.login=<login> -DbasicAuth.pass=<pass>`
+* for Pokeiapi tests run command in command prompt `mvn clean test -P Pokeapi`
 
 ### Test results
 Test results can be found in target/surefire-reports/index.html
